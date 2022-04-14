@@ -27,6 +27,7 @@ describe('TestingDemoComponent', () => {
     let button = fixture.debugElement.nativeElement.querySelector('button');
     button.click();
     tick();
-  
+
+    // expect
   }));
 });
