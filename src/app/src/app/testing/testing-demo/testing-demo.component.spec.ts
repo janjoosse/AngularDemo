@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { TestingDemoComponent } from './testing-demo.component';
 
@@ -22,4 +22,11 @@ describe('TestingDemoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call click handler', fakeAsync(() => {
+    let button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+    tick();
+  
+  }));
 });
